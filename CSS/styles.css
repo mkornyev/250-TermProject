@@ -2,27 +2,143 @@
 body {
 	font-family: "Verdana", Geneva, sans-serif;
 	font-size: 100%;
-
-	/* 1em = 16px/full elem size by defalt */
-	
 	line-height: 1.7em;
 	color: #000000;
+	margin: 0 auto; 
 }
 
-#container {
-	width: 70%;
-	margin: 10px auto;
-	border: 1px solid gray;
+html {
+	height: 100%;
+	box-sizing: border-box;
 }
 
-div.nav {
+/**,
+*:before,
+*:after {
+  box-sizing: inherit;
+}*/
+
+div.navbar input { 
+	width: 15em;
+}
+
+/* Nav Bar*/
+
+div.navbar {
 	position: relative;
 	margin-top: 0px; 
-	heaigh: 20%;
 	background-color: #336699;
-	color: #336699;
+	font-size: .85em;
 }
+
+div.navbar a,
+div.navbar form {
+	display: inline;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+div.navbar form {
+	position: absolute;
+	right: 1em;
+	top: .8em;
+}
+
+div.navbar img {
+	width: 150px;
+}
+
+/* Nav Link Underline Effect */ 
+
+span.selected_effect{
+  font-weight: bold;
+}
+
+div.navbar a.underline_effect,
+div.navbar a.underline_effect:after,
+div.navbar a.underline_effect:before {
+  transition: all .5s;
+}
+
+div.navbar a.underline_effect{
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.15em;
+}
+
+div.navbar a.underline_effect{
+  position: relative;
+}
+div.navbar a.underline_effect:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #ffffff;
+  height: 1px;
+}
+
+div.navbar a.underline_effect:hover:after {
+  width: 85%;
+}
+
+/* Logo Effect */
+div.navbar img {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	filter: blur(0px);
+}
+div.navbar:hover img {
+	opacity: .5;
+	filter: blur(1px);
+}
+
+/* Footer */
 
 div.footer {
-
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 0;
+	text-align: center;
+	background-color: #336699;
+	height: 60px;
+	padding-top: 15px;
+	color: white;
 }
+
+div.footer img {
+	width: 30px;
+	padding-bottom: 3px; 
+}
+
+div.social {
+	display: inline;
+	position: relative;
+	left: 600px;
+}
+
+div.footer a {
+	text-decoration: none;
+	color: #d3d3d3;
+}
+
+div.footer p {
+	display: inline;
+	color: #d3d3d3;
+}
+
+div.footer a:hover {
+	color: white;
+}
+
+
+
+
+
