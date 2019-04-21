@@ -1,0 +1,28 @@
+
+body {
+	font-family: "Verdana", Geneva, sans-serif;
+	font-size: 100%;
+
+	/* 1em = 16px/full elem size by defalt */
+	
+	line-height: 1.7em;
+	color: #000000;
+}
+
+#container {
+	width: 70%;
+	margin: 10px auto;
+	border: 1px solid gray;
+}
+
+div.nav {
+	position: relative;
+	margin-top: 0px; 
+	heaigh: 20%;
+	background-color: #336699;
+	color: #336699;
+}
+
+div.footer {
+
+}
