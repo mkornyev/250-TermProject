@@ -42,6 +42,11 @@ div.navbar input {
 	height: 35%;
 }
 
+#parallax span {
+	text-decoration: none;
+	color: #fc575e;
+}
+
 div.slot_animation {
 	margin: none;
 }
