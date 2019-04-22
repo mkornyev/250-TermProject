@@ -5,6 +5,7 @@ body {
 	line-height: 1.7em;
 	color: #000000;
 	margin: 0 auto; 
+	margin-top: 80px; /* B/c of navbar */
 }
 
 html {
@@ -22,13 +23,61 @@ div.navbar input {
 	width: 20em;
 }
 
+#parallax {
+	background: url(../images/red_wallet.jpg);
+	background-attachment: fixed;
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-size: auto;
+	height: 400px;
+
+}
+
+#parallax p {
+	margin-left: 3%;
+	width: 40%;
+}
+
+#parallax h2 {
+	height: 35%;
+}
+
+div.slot_animation {
+	margin: none;
+}
+
+div.post-parallax {
+  border-top: solid black;
+  border-width: 1px;
+}
+
+/* Body Load Animation */
+
+div.fade-in {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    font-weight: 0%;
+  }
+  to {
+    opacity: 1;
+    font-weight: 100%;
+  }
+}
+
 /* Nav Bar*/
 
 div.navbar {
-	position: relative;
-	margin-top: 0px; 
+	position: fixed;
+	top: 0; 
+	left: 0;
+	right: 0;
 	background-color: #336699;
 	font-size: .85em;
+	height: 80px;
 }
 
 div.navbar a,
@@ -47,6 +96,7 @@ div.navbar form {
 div.navbar img {
 	width: 150px;
 }
+
 
 /* Nav Link Underline Effect */ 
 
@@ -101,10 +151,11 @@ div.navbar:hover img {
 /* Footer */
 
 div.footer {
-	position: absolute;
+	position: fixed;
 	right: 0;
 	bottom: 0;
 	left: 0;
+
 	padding: 0;
 	text-align: center;
 	background-color: #336699;
@@ -133,7 +184,6 @@ div.footer a {
 div.footer a:hover {
 	color: white;
 }
-
 
 
 
