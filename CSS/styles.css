@@ -47,13 +47,30 @@ div.navbar input {
 	color: #fc575e;
 }
 
+#parallax a.slot_animation {
+	text-decoration-color: #fc575e;
+}
+
 div.slot_animation {
 	margin: none;
 }
 
 div.post-parallax {
   border-top: solid black;
+  padding-bottom: 3em;
+  border-bottom: solid black;
   border-width: 1px;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+div.post-parallax h3 {
+	margin-top: 10%;
+}
+
+div.post-parallax h4,
+div.image-grid h4 {
+	color: #666666;
 }
 
 /* Body Load Animation */
@@ -73,10 +90,21 @@ div.fade-in {
   }
 }
 
+/*Image Grid*/
+div.image-grid {
+	margin: 5%;
+}
+
+div.image-grid img {
+	width: 100%;
+  	margin: 10px 0px;
+}
+
 /* Nav Bar*/
 
 div.navbar {
 	position: fixed;
+	z-index: 1; /*Send element to top*/
 	top: 0; 
 	left: 0;
 	right: 0;
