@@ -15,7 +15,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" media="all" type="text/css" href="CSS/styles.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="CSS/about.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="CSS/jquery-ui.css" />
     <!-- JS -->
     <script type="text/javascript" src="JS/scripts.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -23,6 +24,19 @@
     <script type="text/javascript">
     	odoo.default({ el:'.slot_animation', from: 'best wallet.', to: 'thinnest wallet.', animationDelay: 1000 });
     </script>
+    <script type="text/javascript" src="JS/jquery-ui.js"></script>
+    <script type="text/javascript" src="JS/jquery-3.3.1.min.js"></script>
+
+    <!--Accordion JavaScript-->
+    <script>
+        $(function() {
+            $( "#accordion" ).accordion({
+                autoHeight: true,
+                heightStyle: "content"
+            });
+        });
+    </script>
+
 </head>
 
 
@@ -49,46 +63,49 @@
 
 <!-- Content --> 
 
-<body>
-    <h1>Policies</h1>
+<body class="policies">
+    <div id="content">
+        <div id="policies">
+            <h1>Policies</h1>
+            <div id="accordion">
+                <h4>Warranty</h4>
+                <div><h6>We want you to be 100% satisfied with your purchase.</h6>
 
-    <h3>Warranty</h3>
-    <h6>We want you to be 100% satisfied with your purchase.</h6>
+                <p>You may return or exchange your UNUSED and RE-SELLABLE wallet for any reason within 30 days of purchase. See the EXCHANGES AND RETURNS section below for the returns process.</p>
 
-    <p>You may return or exchange your UNUSED and RE-SELLABLE wallet for any reason within 30 days of purchase. See the EXCHANGES AND RETURNS section below for the returns process.</p>
+                <p>We also guarantee our Big Skinnies for one year for materials and workmanship not including the rubber logo. Please include all your original online order information including: name, street and email address, and reason for return so we can continue to improve our products. Shipping costs are not refundable. Please return retail sales to the original store of purchase according to their return policies.</p>
 
-    <p>We also guarantee our Big Skinnies for one year for materials and workmanship not including the rubber logo. Please include all your original online order information including: name, street and email address, and reason for return so we can continue to improve our products. Shipping costs are not refundable. Please return retail sales to the original store of purchase according to their return policies.</p>
+                <p>If you have any questions, don't hesitate to call us. We can be reached Monday - Friday from 8am- 10pm EST. 1.888.844.6925</p>
 
-    <p>If you have any questions, don't hesitate to call us. We can be reached Monday - Friday from 8am- 10pm EST. 1.888.844.6925</p>
+                <p>Or, email us anytime: service@bigskinny.com</p></div>
+                
+                <h4>Privacy Policy</h4>
+                <div><p>Big Skinny Corporation will never disclose, rent, nor sell your information to anyone.</p>
 
-    <p>Or, email us anytime: service@bigskinny.com</p><br>
-    
-    <h3>Privacy Policy</h3>
-    <p>Big Skinny Corporation will never disclose, rent, nor sell your information to anyone.</p>
+                <p>BigSkinny.net is securely hosted by Yahoo! Store. Yahoo! securely hosts the store pages, ordering system, and order data. Yahoo! automatically collects order information but may only use this information in the aggregate. If you entered BigSkinny.net through Yahoo! Shopping, Yahoo! may also automatically collect information about your shopping experience in general. Please see the Yahoo! Privacy Policy for more information.</p></div>
 
-    <p>BigSkinny.net is securely hosted by Yahoo! Store. Yahoo! securely hosts the store pages, ordering system, and order data. Yahoo! automatically collects order information but may only use this information in the aggregate. If you entered BigSkinny.net through Yahoo! Shopping, Yahoo! may also automatically collect information about your shopping experience in general. Please see the Yahoo! Privacy Policy for more information.</p><br>
+                <h4>Exchanges and Returns</h4>
+                <div><p>We want you to be happy with your online Big Skinny.com purchase. If you are not satisfied for any reason with your Big Skinny product, please return it UNUSED and RE-SELLABLE within 30 days of purchase for an exchange or full refund minus shipping costs to:</p>
 
-    <h3>Exchanges and Returns</h3>
-    <p>We want you to be happy with your online Big Skinny.com purchase. If you are not satisfied for any reason with your Big Skinny product, please return it UNUSED and RE-SELLABLE within 30 days of purchase for an exchange or full refund minus shipping costs to:</p>
+                <p>Big Skinny Returns <br>
+                PO Box 2539 <br>
+                Plattsburgh NY 12901</p>
 
-    <p>Big Skinny Returns <br>
-    PO Box 2539 <br>
-    Plattsburgh NY 12901</p>
+                <p>[NOTE: this returns address is only for items purchased on bigskinny.com NOT for items purchased at stores or other locations]</p>
 
-    <p>[NOTE: this returns address is only for items purchased on bigskinny.com NOT for items purchased at stores or other locations]</p>
+                <p>Please use a trackable and insured shipping method. For a smooth exchange or return to occur, be sure to include the following:</p>
+                <ul>
+                    <li>your name, email address, shipping address, phone number, and order number</li>
+                    <li>instructions informing us what you'd like us to do with the product [ie, please exchange this wallet or I'd like my money back].</li>
+                    <li>If you are making an exchange, be sure to make note of the style and color you'd like to get as a replacement.</li>
+                    <li>Exchanges are subject to new shipping fees.</li>
+                    <li>There are NO returns or refunds for 3rd party promotions.</li>
+                </ul>
 
-    <p>Please use a trackable and insured shipping method. For a smooth exchange or return to occur, be sure to include the following:</p>
-    <ul>
-        <li>your name, email address, shipping address, phone number, and order number</li>
-        <li>instructions informing us what you'd like us to do with the product [ie, please exchange this wallet or I'd like my money back].</li>
-        <li>If you are making an exchange, be sure to make note of the style and color you'd like to get as a replacement.</li>
-        <li>Exchanges are subject to new shipping fees.</li>
-        <li>There are NO returns or refunds for 3rd party promotions.</li>
-    </ul>
-
-    <p>If you have any questions, please contact us at service@bigskinny.com or 617-500-6939. By including these details, your exchange/return will speedily be taken care of. Thanks!</p>
-
-    <br><br>
+                <p>If you have any questions, please contact us at service@bigskinny.com or 617-500-6939. By including these details, your exchange/return will speedily be taken care of. Thanks!</p></div>
+            </div>
+        </div>
+    </div>
 </body>
 
 
