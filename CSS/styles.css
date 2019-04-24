@@ -73,6 +73,12 @@ div.image-grid h4 {
 	color: #666666;
 }
 
+iframe.video-frame {
+  border-width: 10px;
+  border-radius: 1em;
+  border-color: #336699;
+}
+
 /* Body Load Animation */
 
 div.fade-in {
