@@ -20,6 +20,8 @@
     <script type="text/javascript" src="JS/scripts.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/coderitual/odoo/feature/codevember16/lib/odoo.js"></script>
+    <!-- Freefind searchbox link -->
+    <script src="//inc.freefind.com/inc/ffse-overlay.min.js" async></script>
 </head>
 
 
@@ -36,10 +38,27 @@
     <a class="nav-link underline_effect" href="about.html">About Us</a>
 
     <!-- Search -->
-    <form class="form-inline">
+    <!-- <form class="form-inline">
 	    <input class="form-control mr-sm-2" type="search" placeholder="thinnest wallet ever" aria-label="Search">
 	    <button class="btn btn-outline-light" type="submit">Find it</button>
-  	</form>
+  	</form> -->
+
+  	<!-- Search Box -->
+	<table class="search_bar" cellpadding=0 cellspacing=0 border=0 >
+	<tr>
+		<td>
+			<form class="form-inline mr-5 pr-4" action="https://search.freefind.com/find.html"  method="get" accept-charset="utf-8" target="_self">
+			<input type="hidden" name="si" value="673709">
+			<input type="hidden" name="pid" value="r">
+			<input type="hidden" name="n" value="0">
+			<input type="hidden" name="_charset_" value="">
+			<input type="hidden" name="bcd" value="&#247;">
+			<input class="form-control mr-sm-2" type="text" name="query" placeholder="thinnest wallet ever"> 
+			<button type="submit" value="search" class="btn btn-outline-light">Find it</button>
+			</form>
+		</td>
+	</tr>
+	</table>
 </div>
 </div>
 
