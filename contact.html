@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head>
+	<!-- Metadata for the website -->
+	<title>Big Skinny | About</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Alex, David, Max, & Max">
+	<meta name="keywords" content="big skinny thin wallet world's thinnest wallet light wallet">
+	<meta name="description" content="The home of the world's skinniest wallet">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" media="all" type="text/css" href="CSS/about.css" />
+    <!-- JS -->
+    <script type="text/javascript" src="JS/scripts.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/coderitual/odoo/feature/codevember16/lib/odoo.js"></script>
+    <script type="text/javascript">
+    	odoo.default({ el:'.slot_animation', from: 'best wallet.', to: 'thinnest wallet.', animationDelay: 1000 });
+    </script>
+</head>
+
+
+<!-- NavBar --> 
+<div class="row navbar">
+<div class="col align-self-left text-left pl-4">
+    <!-- Logo -->
+    <a href="index.html"><img src="images/blue_and_white_logo.png"></a>
+
+    <!-- Links -->
+    <a class="nav-link underline_effect" href="mens_wallet.html">Men's Wallets</a>
+    <a class="nav-link underline_effect" href="womens_wallet.html">Women's Wallets</a>
+    <a class="nav-link underline_effect" href="better.html">Why We're Better</a>
+    <a class="nav-link underline_effect" href="reviews.html">Positive Reviews</a>
+    <a class="nav-link underline_effect" href="about.html">About Us</a>
+    
+    <!-- Search Box -->
+    <table class="search_bar" cellpadding=0 cellspacing=0 border=0 >
+    <tr>
+        <td>
+            <form class="form-inline mr-5 pr-4" action="https://search.freefind.com/find.html"  method="get" accept-charset="utf-8" target="_self">
+            <input type="hidden" name="si" value="673709">
+            <input type="hidden" name="pid" value="r">
+            <input type="hidden" name="n" value="0">
+            <input type="hidden" name="_charset_" value="">
+            <input type="hidden" name="bcd" value="&#247;">
+            <input class="form-control mr-sm-2" type="text" name="query" placeholder="thinnest wallet ever"> 
+            <button type="submit" value="search" class="btn btn-outline-light">Find it</button>
+            </form>
+        </td>
+    </tr>
+    </table>
+</div>
+</div>
+
+<!-- Content --> 
+
+<body class="contact">
+    <div id="content">
+        <div id="contact">
+            <!--Order and contact form-->
+            <h3>Contact Us</h3>
+
+            <form id="contact_form" onsubmit="return validate()" action="mailto:service@bigskinny.com" method="post" enctype="text/plain">
+                <label>Name*:</label><br>
+                <input type="text" name="name" size="38" maxlength="250" required><br><br>
+                <label for="txtZipcode">Zip code:</label><br>
+                <input type="text" id="txtZipcode" name="txtZipcode" size="5" minlength="5" maxlength="5"><br><br>
+                <label>Email*:</label><br>
+                <input type="email" name="email" size="38" required><br><br>
+                <label>Subject:</label><br>
+                <input type="text" name="subject" size="38"><br><br>
+                <label>Message:</label><br>
+                <textarea type="message" maxlength="1000" rows="10" cols="40"></textarea><br><br>
+                <input type="checkbox" name="subscribe">
+                Subscribe me to the mailing list!
+                <p>*Required</p>
+            </form>
+
+            <button type="submit" form="contact_form">Submit</button>
+        </div>
+
+        <div id="info">
+            <!--Info table-->
+            <h3>How to Reach Us</h3>
+            <table>
+                <tr>
+                    <th>Street</th>
+                    <td>215 Western Avenue</td>
+                </tr>
+                <tr>
+                    <th>City, State</th>
+                    <td>Cambridge, MA 02139</td>
+                </tr>
+                <tr>
+                    <th>Phone number</th>
+                    <td>617-500-6939</td>
+                </tr>
+                <tr>
+                    <th>Email address</th>
+                    <td><a href="mailto:service@bigskinny.com">service@bigskinny.com</a></td>
+                </tr>
+                <tr>
+                    <th>Hours: Mon-Fri</th>
+                    <td>8AM - 6PM</td>
+                </tr>
+                <tr>
+                    <th>Hours: Sat-Sun</th>
+                    <td>9AM - 2PM</td>
+                </tr>
+            </table>
+
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2947.951462069819!2d-71.11277628454359!3d42.36487367918665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37759ea95dddd%3A0x77049aa017a94f3b!2s215+Western+Ave%2C+Cambridge%2C+MA+02139!5e0!3m2!1sen!2sus!4v1556130042129!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe><!--Link to Google Maps widget-->
+            </div>
+        </div>
+</body>
+
+
+<!-- Footer --> 
+<div class="row footer">
+
+<div class="col align-self-left text-left pl-4">
+  <span>&copy;<a href="https://www.bigskinny.net/">Big Skinny 2019</a> |</span>
+  <span><a href="mailto:service@bigskinny.com">Email</a> | <a href="tel:6175006939">Phone:</a> 617.500.6939</span>
+  <div class="social">
+      <span><a href="https://www.facebook.com/bigskinny"><img src="images/fb.png">&nbsp;Facebook</a></span>
+      <span><a href="https://www.instagram.com/bigskinny_wallets"><img src="images/insta.png">&nbsp;Instagram</a></span>
+      <span><a href="https://twitter.com/big_skinny"><img src="images/twitter.png">&nbsp;Twitter</a></span>
+      <span><a href="https://www.youtube.com/user/BigSkinnyWallet1"><img src="images/youtube.png">&nbsp;YouTube</a></span>
+      <span><a href="https://www.pinterest.com/bigskinny/"><img src="images/pinterest.png">&nbsp;Pinterest</a></span>
+  </div>
+</div>
+
+</div>
+
+</html>
