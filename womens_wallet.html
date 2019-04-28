@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name = "author" content = "Max Dunaevschi + Alex Bellomo + David Domalik+ Maksym Kornyev">
+      <meta name = "keywords" content = "Big Skinny Wallets">
+      <meta name = "description" content = "Official Website of Big Skinny Wallets">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel = "stylesheet" media = "all" type = "text/css" href = "css/styles_wallet.css" />
+      <link rel="icon" href="images/logo.png">
+      <link rel="stylesheet" href="css/jk-rating-stars.min.css" />
+
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+      <script src="data/inventory_women.js"></script>
+      <script type="text/javascript" src="js/scripts_women.js"></script>
+      <script src="js/jk-rating-stars.min.js"></script>
+      <title>Big Skinny Wallets</title>
+    </head>
+
+    <div class="row navbar">
+    <div class="col align-self-left text-left pl-4">
+      	<!-- Logo -->
+      	<a href="index.html"><img src="images/blue_logo.png"></a>
+
+      	<!-- Links -->
+        <a class="nav-link underline_effect" href="mens_wallet.html">Wallets</a>
+        <a class="nav-link underline_effect" href="better.html">Why We're Better</a>
+        <a class="nav-link underline_effect" href="reviews.html">Positive Reviews</a>
+        <a class="nav-link underline_effect" href="about.html">About Us</a>
+
+        <!-- Search -->
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="thinnest wallet ever" aria-label="Search">
+        	  <button class="btn btn-outline-light" type="submit">Find it</button>
+        </form>
+      </div>
+      </div>
+
+    <body ng-app="BSApp">
+        <div id="container">
+            <div id = "content"  ng-controller="myCtrl">
+
+                <div class = "row">
+                    <div class="col-sm-2" id = "sidebar">
+                      <h3>Filter</h3>
+                      <h2><strong>Type</strong><h2>
+
+                          <input type="checkbox" id="pocket" name="pocket" ng-model="pocket" ng-change="filteredWallets()">
+                          <label for="pocket">Pocket Sized</label>
+                          <br/>
+                          <input type="checkbox" id="long" name="long" ng-model="long" ng-change="filteredWallets()">
+                          <label for="long">Long</label>
+                          <br/>
+                          <input type="checkbox" id="RFID" name="RFID" ng-model="RFID" ng-change="filteredWallets()">
+                          <label for="RFID">RFID</label>
+                          <br/>
+                          <input type="checkbox" id="traveler" name="traveler" ng-model="traveler" ng-change="filteredWallets()">
+                          <label for="traveler">Travel</label>
+                      <br/><br/>
+
+                      <h2><strong>Price</strong><h2>
+                          <input type="checkbox" id="low" name="low" ng-model="low" ng-change="filteredWallets()">
+                          <label for="low">$0.00 - 25.00</label>
+                          <br/>
+                          <input type="checkbox" id="medium" name="medium" ng-model="medium" ng-change="filteredWallets()">
+                          <label for="medium">$25.01 - 40.00</label>
+                          <br/>
+                          <input type="checkbox" id="high" name="high" ng-model="high" ng-change="filteredWallets()">
+                          <label for="high">$40.01 +</label>
+                      <br/><br/>
+
+                      <h2><strong>Popular</strong><h2>
+                          <input type="checkbox" id="popular" name="popular" ng-model="popular" ng-change="filteredWallets()">
+                          <label for="popular">Most Popular</label>
+
+                          <input type="checkbox" id="bestSeller" name="bestSeller" ng-model="bestSeller" ng-change="filteredWallets()">
+                          <label for="bestSeller">Best Seller</label>
+
+                      <h2><strong>Model</strong><h2>
+                          <input type="checkbox" id="flap" name="flap" ng-model="flap" ng-change="filteredWallets()">
+                          <label for="flap">Flap</label>
+                          <br/>
+                          <input type="checkbox" id="zipper" name="zipper" ng-model="zipper" ng-change="filteredWallets()">
+                          <label for="zipper">Zipper</label>
+                          <br/>
+                          <input type="checkbox" id="clip" name="clip" ng-model="clip" ng-change="filteredWallets()">
+                          <label for="clip">Clip</label>
+                      <br/><br/>
+                    </div>
+
+                    <div class="col-sm-10" id = "wallet-display">
+                        <div class = "row">
+                            <div ng-repeat= "item in wallets | filter:filteredWallets()" class = "col-sm-4">
+                                <div class = "row wallet-view">
+                                    <img src={{item.image}} class = "center"/>
+                                </div>
+                                <div class = "row wallet-info center-text">
+                                    <strong>{{item.itemNumber}}</strong>
+                                    <br/>
+                                    <span  data-ng-repeat="i in range.slice(0,item.popularity) track by $index"><img class="star" src="./images/star.png"></span>
+                                    <span ng-if="cutStar(item.popularity)">
+                                        <img class="half_star" src="./images/star.png">
+                                    </span>
+                                    <br/>
+                                    <strong>${{item.price}}</strong>
+                                    <br/>
+                                    <button type="button" id = "add-btn">Add To Cart</button>
+                                </div>
+                            </div>
+                            <!-- <div ng-repeat= "item in wallets | filter:filteredWallets()" class = "col-sm-4">
+                                <div class = "row wallet-view">
+                                    <img src={{item.image}} />
+                                </div>
+                                <div class = "row wallet-info">
+                                    <div>{{item.itemNumber}}</div><br/><br/>
+                                    <div>Popularity: {{item.popularity}}</div><br/><br/>
+                                    <div>Price: ${{item.price}}</div>
+                                </div>
+                            </div>
+                            <div ng-repeat= "item in wallets | filter:filteredWallets()" class = "col-sm-4">
+                                <div class = "row wallet-view">
+                                    <img src={{item.image}} />
+                                </div>
+                                <div class = "row wallet-info">
+                                    <div>{{item.itemNumber}}</div><br/><br/>
+                                    <div>Popularity: {{item.popularity}}</div><br/><br/>
+                                    <div>Price: ${{item.price}}</div>
+                                </div>
+                            </div> -->
+                            <!-- <div id = "wallet-view" class = "col-sm-7">
+                                <img src={{item.image}} />
+                            </div>
+                            <div id = "wallet-info" class = "col-sm-5">
+                                <div>{{item.itemNumber}}</div>
+                                <div>Popularity: {{item.popularity}}</div>
+                                <div>Best Seller: {{item.bestSeller}}</div>
+                                <div>Price: ${{item.price}}</div>
+                            </div> -->
+                        </div>
+
+                        <!-- <div class="col-sm-8">
+                          <table class="table  table-bordered">
+                            <thead>
+                               <tr>
+                                  <td>Wallet</td>
+                                  <td>Details</td>
+                               </tr>
+                            </thead>
+                            <tr ng-repeat="item in wallets | filter:filteredWallets()">
+                               <td><img src={{item.image}}><div>{{item.itemNumber}}</div></td>
+                               <td><div>Type: {{item.type}}</div>
+                               <div>Model: {{item.model}}</div>
+                               <div>Gender: {{item.gender}}</div>
+                               <div>Color: {{item.color}}</div>
+                               <div>Popularity: {{item.popularity}}</div>
+                               <div>Best Seller: {{item.bestSeller}}</div>
+                               <div>Price: ${{item.price}}</div>
+                            </tr>
+                         </table>
+                       </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="row footer">
+
+            <div class="col align-self-left text-left pl-4">
+                <span>&copy;<a href="https://www.bigskinny.net/">Big Skinny 2019</a> |</span>
+                <span><a href="mailto:service@bigskinny.com">Email</a> | <a href="tel:6175006939">Phone:</a> 617.500.6939</span>
+                <div class="social">
+                	  <span><a href="https://www.facebook.com/bigskinny"><img src="images/fb.png">&nbsp;Facebook</a></span>&nbsp;|
+                	  <span><a href="https://www.instagram.com/bigskinny_wallets"><img src="images/insta.png">&nbsp;Instagram</a></span>&nbsp;|
+                	  <span><a href="https://twitter.com/big_skinny"><img src="images/twitter.png">&nbsp;Twitter</a></span>&nbsp;|
+                	  <span><a href="https://www.youtube.com/user/BigSkinnyWallet1"><img src="images/youtube.png">&nbsp;YouTube</a></span>&nbsp;|
+                	  <span><a href="https://www.pinterest.com/bigskinny/"><img src="images/pinterest.png">&nbsp;Pinterest</a></span>
+                </div>
+            </div>
+
+        </div>
+        <!-- Imports for jquery and bootstrap-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
