@@ -18,6 +18,7 @@
     <link rel="stylesheet" media="all" type="text/css" href="CSS/about.css" />
     <!-- JS -->
     <script type="text/javascript" src="JS/scripts.js"></script>
+    <script type="text/javascript" src="JS/about.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/coderitual/odoo/feature/codevember16/lib/odoo.js"></script>
     <script type="text/javascript">
@@ -53,31 +54,30 @@
     <div id="content">
         <div id="contact">
             <!--Order and contact form-->
-            <h1>Contact Us (or call 617-500-6939)</h1>
+            <h3>Contact Us</h3>
 
-            <form id="order" onsubmit="return validate()" action="mailto:service@bigskinny.com" method="post" enctype="text/plain">
+            <form id="contact_form" onsubmit="return validate()" action="mailto:service@bigskinny.com" method="post" enctype="text/plain">
                 <label>Name*:</label><br>
-                <input type="text" name="name" size="35" maxlength="250" required><br><br>
+                <input type="text" name="name" size="38" maxlength="250" required><br><br>
                 <label for="txtZipcode">Zip code:</label><br>
                 <input type="text" id="txtZipcode" name="txtZipcode" size="5" maxlength="5"><br><br>
                 <label>Email*:</label><br>
-                <input type="email" name="email" size="35" required><br><br>
+                <input type="email" name="email" size="38" required><br><br>
                 <label>Subject:</label><br>
-                <input type="text" name="subject" size="50"><br><br>
-                <label>Order:</label><br>
-                <textarea type="message" maxlength="1000" rows="27" cols="50"></textarea><br><br>
+                <input type="text" name="subject" size="38"><br><br>
+                <label>Message:</label><br>
+                <textarea type="message" maxlength="1000" rows="10" cols="40"></textarea><br><br>
                 <input type="checkbox" name="subscribe">
                 Subscribe me to the mailing list!
                 <p>*Required</p>
             </form>
 
-            <button type="submit" form="order">Submit</button>
-
+            <button type="submit" form="contact_form">Submit</button>
         </div>
 
         <div id="info">
             <!--Info table-->
-            <h3>Visit Us</h3>
+            <h3>How to Reach Us</h3>
             <table>
                 <tr>
                     <th>Street</th>

@@ -87,6 +87,7 @@ div.navbar {
 	background-color: #336699;
 	font-size: .85em;
 	height: 80px;
+	z-index: 2;
 }
 
 div.navbar a,
@@ -157,10 +158,34 @@ div.navbar:hover img {
 	filter: blur(1px);
 }
 
+
+/* Links */
+a:link {
+	color: #336699;
+}
+
+a:visited {
+	color: #999999;
+}
+
+a:hover {
+	color: #336699;
+}
+
+
 /* Body */
+
 h1 {
 	font-weight: bold;
 	color: #336699;
+}
+
+#subpages li, h4 {
+	display: inline;
+}
+
+#subpages ul {
+	font-size: 1.4em;
 }
 
 #about img {
@@ -180,6 +205,71 @@ h5 {
 
 h6 {
 	font-weight: bold
+}
+
+#accordion {
+	font-family: "Verdana", Geneva, sans-serif;
+	font-style: normal;
+	background-color: #FFFFFF;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#accordion .ui-accordion-header {
+	color: #FFFFFF;
+	background-color: #336699;
+	border: 3px solid #666666;
+}
+
+#accordion .ui-accordion-content {
+	color: #000000;
+	background-color: #999999;
+	margin: 0px;
+	padding: 16px;
+	border: 3px solid #666666;
+}
+
+/* Order form */
+#contact {
+	display: inline-block;
+	background-color: #336699;
+	color: #FFFFFF;
+	padding: 30px;
+	margin-right: 2.5%;
+	margin-bottom: 20px;
+	width: 47.5%;
+	border: 10px double #666666;
+}
+
+/* Submit button */
+button {
+	background-color: #FFFFFF;
+	font-weight: bold;
+	font-size: 1em;
+	color: #336699;
+	width: 150px;
+	height: 50px;
+	float: right;
+	border: 8px double #666666;
+}
+
+/* Table */
+
+#info table {
+	border-spacing: 20px;
+	text-align: right;
+	text-align-last: left;
+	margin-bottom: 40px;
+}
+
+#info {
+	display:inline-block;
+	vertical-align:top;
+}
+
+/* Google Maps */
+#map {
+	display:inline-block;
 }
 
 
